@@ -7,7 +7,7 @@ inherit eutils cmake-utils git-r3
 
 DESCRIPTION="Neovim client library and GUI using Qt5."
 HOMEPAGE="https://github.com/equalsraf/neovim-qt/"
-EGIT_REPO_URL="https://github.com/equalsraf/neovim-qt.git"
+EGIT_REPO_URI="https://github.com/equalsraf/neovim-qt.git"
 
 LICENSE="ISC"
 SLOT="0"
@@ -18,7 +18,8 @@ DEPEND="
 		dev-qt/qtcore:5
 		dev-qt/qtwidgets:5
 		dev-qt/qtnetwork:5
-		dev-qt/qttest:5"
+		dev-qt/qttest:5
+		app-editors/neovim"
 RDEPEND="${DEPEND}"
 
 src_configure() {
