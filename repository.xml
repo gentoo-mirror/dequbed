@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 
 <repositories version="1.0">
-	<repo priority="50" quality="experimental" status="unofficial">
-		<name>dequbed</name>
-		<description>My own personal overlay</description>
+    <repo priority="50" quality="experimental" status="unofficial">
+        <name>dequbed</name>
+        <description>My own personal overlay</description>
         <homepage>https://dequbed.space/</homepage>
-		<owner>
-			<email>me@dequbed.space</email>
-		</owner>
-		<source type="git">https://github.com/dequbed/overlay.git</source>
-	</repo>
+        <owner>
+            <email>me@dequbed.space</email>
+        </owner>
+        <source type="git">https://github.com/dequbed/overlay.git</source>
+    </repo>
 </repositories>

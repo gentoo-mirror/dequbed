@@ -1,4 +1,4 @@
-# Copyright 2018 Gregor Reitzenstein
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -18,5 +18,5 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_configure() {
-    cmake-utils_src_configure
+	cmake-utils_src_configure
 }
