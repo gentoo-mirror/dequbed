@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="project">
+    <email>me@dequbed.space</email>
+    <name>dequbed</name>
+  </maintainer>
+  <longdescription>
+    Neovim-Qt is a Qt5-based GUI for Neovim.
+  </longdescription>
+</pkgmetadata>
