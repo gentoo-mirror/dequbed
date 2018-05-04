@@ -14,7 +14,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=""
+DEPEND="
+		dev-qt/qtcore:5
+		dev-qt/qtwidgets:5
+		dev-qt/qtnetwork:5
+		dev-qt/qttest:5"
 RDEPEND="${DEPEND}"
 
 src_configure() {
