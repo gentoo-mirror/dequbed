@@ -12,7 +12,7 @@ EGIT_REPO_URI="https://github.com/MultiMC/MultiMC5.git"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE=""
 
 COMMON_DEPEND="
