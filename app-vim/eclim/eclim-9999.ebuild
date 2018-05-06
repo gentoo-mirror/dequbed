@@ -15,7 +15,7 @@ SLOT="0"
 
 KEYWORDS="~amd64"
 
-IUSE="cdt +java doc nvim vim"
+IUSE="cdt +java doc +nvim vim"
 
 COMMON_DEPEND=">=dev-util/eclipse-sdk-bin-4.5"
 DEPEND="${COMMON_DEPEND}
