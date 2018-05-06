@@ -33,7 +33,7 @@ nvim_home="/usr/share/nvim/runtime"
 
 pkg_setup() {
 	best_eclipse="$(best_version dev-util/eclipse-sdk-bin)"
-	eclipse_v="$(get_version_component_range 1-2 ${best_eclipse})"
+	eclipse_v="$(get_version_component_range 6-7 ${best_eclipse})"
 	eclipse_home="opt/eclipse-sdk-bin-${eclipse_v}"
 
 	ewarn "Eclim can only use Eclipse plugins that have been installed globally!"
