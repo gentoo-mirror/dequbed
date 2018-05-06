@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit eutils java-utils-2 java-pkg-2 java-ant-2 vim-plugin
+inherit eutils java-utils-2 java-pkg-2 java-ant-2 vim-plugin versionator
 
 DESCRIPTION="The power of Eclipse in your favorite editor."
 HOMEPAGE="http://eclim.org/"
@@ -33,7 +33,8 @@ nvim_home="/usr/share/nvim/runtime"
 
 pkg_setup() {
 	best_eclipse="$(best_version dev-util/eclipse-sdk-bin)"
-	eclipse_home="opt/${best_eclipse}"
+	eclipse_v="$(get_version_component_range 1-2 ${best_eclipse})"
+	eclipse_home="opt/eclipse-sdk-bin-${eclipse_v}"
 
 	ewarn "Eclim can only use Eclipse plugins that have been installed globally!"
 	ewarn "Please make sure that the plugins you need are installed in ${eclipse_home}."
