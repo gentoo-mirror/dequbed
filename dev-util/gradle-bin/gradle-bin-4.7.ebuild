@@ -56,7 +56,6 @@ src_install() {
 
 	cp -Rp bin init.d lib media "${ED}/${GRADLE_SHARE}" || die "failed to copy"
 
-	java-pkg_regjar "${ED}/${GRADLE_SHARE}"/bin/*.jar
 	java-pkg_regjar "${ED}/${GRADLE_SHARE}"/lib/*.jar
 
 	dodoc NOTICE getting-started.html
