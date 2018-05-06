@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="project">
+    <email>me@dequbed.space</email>
+    <name>dequbed</name>
+  </maintainer>
+  <longdescription>
+    Eclim provides the ability to access Eclipse code editing features (code completion, searching, code validation, and many more) via the command line or a local network connection, allowing those features to be integrated with your favorite editor.
+    Eclim provides an integration with Vim, but third party clients have been created to add eclim support to other editors as well (emacs, sublime text 2, textmate).
+  </longdescription>
+</pkgmetadata>
