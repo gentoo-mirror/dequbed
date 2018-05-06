@@ -44,6 +44,8 @@ RDEPEND=">=virtual/jre-1.5"
 GRADLE="${PN}-${SLOT}"
 GRADLE_SHARE="/usr/share/${GRADLE}"
 
+S="${WORKDIR}/gradle-${PV}"
+
 java_prepare() {
 	rm -v bin/*.bat || die
 	chmod 644 lib/*.jar || die
