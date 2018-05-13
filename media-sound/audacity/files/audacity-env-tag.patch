@@ -1,6 +1,6 @@
-diff -Naur audacity-minsrc-2.2.2.orig/lib-src/FileDialog/Makefile.in audacity-minsrc-2.2.2/lib-src/FileDialog/Makefile.in
---- audacity-minsrc-2.2.2.orig/lib-src/FileDialog/Makefile.in	2017-09-12 18:54:07.968873002 +0200
-+++ audacity-minsrc-2.2.2/lib-src/FileDialog/Makefile.in	2017-09-12 18:55:14.002869350 +0200
+diff -Naur audacity-minsrc-2.2.2-rc1.orig/lib-src/FileDialog/Makefile.in audacity-minsrc-2.2.2-rc1/lib-src/FileDialog/Makefile.in
+--- audacity-minsrc-2.2.2-rc1.orig/lib-src/FileDialog/Makefile.in	2018-05-13 14:28:03.281816921 +0200
++++ audacity-minsrc-2.2.2-rc1/lib-src/FileDialog/Makefile.in	2018-05-13 14:28:31.683818963 +0200
 @@ -203,7 +203,7 @@
  am__v_CXXLD_1 = 
  OBJCXXCOMPILE = $(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
