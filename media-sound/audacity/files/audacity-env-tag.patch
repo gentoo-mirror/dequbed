@@ -1,5 +1,4 @@
-diff -Naur audacity-minsrc-2.2.2-rc1.orig/lib-src/FileDialog/Makefile.in audacity-minsrc-2.2.2-rc1/lib-src/FileDialog/Makefile.in
---- audacity-minsrc-2.2.2-rc1.orig/lib-src/FileDialog/Makefile.in	2018-05-13 14:28:03.281816921 +0200
+--- audacity-minsrc-2.2.2-rc1/lib-src/FileDialog/Makefile.in	2018-05-13 14:28:03.281816921 +0200
 +++ audacity-minsrc-2.2.2-rc1/lib-src/FileDialog/Makefile.in	2018-05-13 14:28:31.683818963 +0200
 @@ -203,7 +203,7 @@
  am__v_CXXLD_1 = 
