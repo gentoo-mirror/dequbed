@@ -117,8 +117,7 @@ src_prepare() {
 	pushd src >&/dev/null || die
 	for f in console/console.c dird/dird.c filed/filed.c \
 		stored/bcopy.c stored/bextract.c stored/bls.c \
-		stored/bscan.c stored/btape.c stored/stored.c \
-		qt-console/main.cpp; do
+		stored/bscan.c stored/btape.c stored/stored.c; do
 		sed -i -e 's|^\(#define CONFIG_FILE "\)|\1/etc/bareos/|g' "${f}" \
 			|| die "sed on ${f} failed"
 	done
@@ -126,12 +125,6 @@ src_prepare() {
 
 	# bug 466690 Use CXXFLAGS instead of CFLAGS
 	sed -i -e 's/@CFLAGS@/@CXXFLAGS@/' autoconf/Make.common.in || die
-
-	# stop build for errors in subdirs
-	epatch "${FILESDIR}"/${PN}-12.4.5-Makefile.patch
-
-	# bat needs to respect LDFLAGS
-	epatch "${FILESDIR}"/${PN}-12.4.5-bat-ldflags.patch
 
 	# do not strip binaries
 	for d in filed console dird stored; do
@@ -204,7 +197,6 @@ src_configure() {
 		--with-fd-user=root \
 		--with-fd-group=bareos \
 		--with-sbin-perm=0755 \
-		--with-systemd \
 		--enable-dynamic-cats-backends \
 		--enable-dynamic-storage-backends \
 		--enable-batch-insert \
