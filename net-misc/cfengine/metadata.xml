@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="project">
+		<email>dequbed@paranoidlabs.org</email>
+		<name>dequbed</name>
+	</maintainer>
+	<use>
+		<flag name="html">Install HTML documentation</flag>
+		<flag name="libvirt">Enable support for virtual machine management through <pkg>app-emulation/libvirt</pkg></flag>
+		<flag name="masterfiles">Install the Masterfiles Policy Framework</flag>
+		<flag name="qdbm">Use <pkg>dev-db/qdbm</pkg> as database backend</flag>
+		<flag name="tests">Install test files</flag>
+		<flag name="tokyocabinet">Use <pkg>dev-db/tokyocabinet</pkg> as database backend</flag>
+	</use>
+	<longdescription>
+	Cfengine, or the configuration engine is an autonomous agent and a middle to
+	high level policy language for building expert systems which administrate
+	and configure large computer networks. Cfengine uses the idea of classes and
+	a primitive intelligence to define and automate the configuration and
+	maintenance of system state, for small to huge configurations. Cfengine is
+	designed to be a part of a computer immune system, and can be thought of as
+	a gaming agent. It is ideal for cluster management and has been adopted for
+	use all over the world in small and huge organizations alike.
+	</longdescription>
+</pkgmetadata>
