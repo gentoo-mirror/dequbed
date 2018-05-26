@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="5"
@@ -107,7 +107,7 @@ src_install() {
 	# CFEngine binaries can be used by normal users as well, sym them into
 	# /usr/bin instead
 	for bin in promises agent monitord serverd execd runagent key; do
-		dosym /usr/bin/cf-$bin /var/cfengine/bin/cf-$bin || die
+		dosym /usr/sbin/cf-$bin /var/cfengine/bin/cf-$bin || die
 	done
 
 	if use masterfiles; then
