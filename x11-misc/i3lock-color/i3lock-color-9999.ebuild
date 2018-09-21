@@ -23,6 +23,7 @@ RDEPEND="!x11-misc/i3lock
 	>=x11-libs/libxkbcommon-0.5.0[X]
 	x11-libs/libxcb[xkb]
 	x11-libs/xcb-util
+	x11-libs/xcb-util-xrm
 	x11-libs/cairo[xcb]"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
