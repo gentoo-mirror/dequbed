@@ -6,12 +6,12 @@ depend() {
 
 start() {
 	ebegin "Starting cf-monitord"
-	start-stop-daemon --start --exec /usr/sbin/cf-monitord -- ${EXTRA_OPTS}
+	start-stop-daemon --start --exec /usr/bin/cf-monitord -- ${EXTRA_OPTS}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping cf-monitord"
-	start-stop-daemon --stop --pidfile /var/cfengine/cf-monitord.pid --exec /usr/sbin/cf-monitord
+	start-stop-daemon --stop --pidfile /var/cfengine/cf-monitord.pid --exec /usr/bin/cf-monitord
 	eend $?
 }

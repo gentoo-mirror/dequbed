@@ -6,12 +6,12 @@ depend() {
 
 start() {
 	ebegin "Starting cfexecd"
-	start-stop-daemon --start --quiet --exec /usr/sbin/cfexecd 
+	start-stop-daemon --start --quiet --exec /usr/bin/cfexecd 
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping cfexecd"
-	start-stop-daemon --stop --quiet --exec /usr/sbin/cfexecd
+	start-stop-daemon --stop --quiet --exec /usr/bin/cfexecd
 	eend $?
 }

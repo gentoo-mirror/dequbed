@@ -6,12 +6,12 @@ depend() {
 
 start() {
 	ebegin "Starting cfenvd"
-	start-stop-daemon --start --quiet --exec /usr/sbin/cfenvd
+	start-stop-daemon --start --quiet --exec /usr/bin/cfenvd
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping cfenvd"
-	start-stop-daemon --stop --quiet --exec /usr/sbin/cfenvd
+	start-stop-daemon --stop --quiet --exec /usr/bin/cfenvd
 	eend $?
 }
