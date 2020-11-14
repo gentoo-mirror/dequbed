@@ -106,7 +106,7 @@ src_install() {
 	# CFEngine binaries can be used by normal users as well, sym them into
 	# /usr/bin instead
 	for bin in promises agent monitord serverd execd runagent key; do
-		dosym /usr/bin/cf-$bin /var/cfengine/bin/cf-$bin || die
+		dosym usr/bin/cf-$bin var/cfengine/bin/cf-$bin || die
 	done
 
 	if use masterfiles; then
