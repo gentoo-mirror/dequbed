@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="5"
@@ -9,8 +9,7 @@ MY_PV="${PV//_beta/b}"
 MY_PV="${MY_PV/_p/p}"
 MY_P="${PN}-${MY_PV}"
 
-DESCRIPTION="An automated suite of programs for configuring and maintaining
-Unix-like computers"
+DESCRIPTION="An automated suite of programs for configuring and maintaining computers"
 HOMEPAGE="http://www.cfengine.org/"
 SRC_URI="https://cfengine-package-repos.s3.amazonaws.com/tarballs/${MY_P}.tar.gz -> ${MY_P}.tar.gz
 	masterfiles? ( https://cfengine-package-repos.s3.amazonaws.com/tarballs/${PN}-masterfiles-${MY_PV}.tar.gz -> ${PN}-masterfiles-${MY_PV}.tar.gz )"
@@ -23,7 +22,7 @@ IUSE="acl examples libvirt mysql masterfiles postgres +qdbm selinux tokyocabinet
 
 DEPEND="acl? ( virtual/acl )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql )
+	postgres? ( dev-db/postgresql:= )
 	selinux? ( sys-libs/libselinux )
 	tokyocabinet? ( dev-db/tokyocabinet )
 	qdbm? ( dev-db/qdbm )
@@ -107,7 +106,7 @@ src_install() {
 	# CFEngine binaries can be used by normal users as well, sym them into
 	# /usr/bin instead
 	for bin in promises agent monitord serverd execd runagent key; do
-		dosym /usr/sbin/cf-$bin /var/cfengine/bin/cf-$bin || die
+		dosym usr/sbin/cf-$bin /var/cfengine/bin/cf-$bin || die
 	done
 
 	if use masterfiles; then
@@ -125,8 +124,8 @@ pkg_postinst() {
 	echo
 	einfo "Init scripts for cf-serverd, cf-monitord, and cf-execd are provided."
 	einfo
-	einfo "To run cfengine out of cron every half hour modify your crontab:"
-	einfo "0,30 * * * *    /usr/bin/cf-execd -F"
+	einfo "If you don't want to use the init scripts, you can run cfengine using cron:"
+	einfo "0,30 * * * *    /usr/bin/cf-execd -O"
 	echo
 
 	elog "If you run cfengine the very first time, you MUST generate the keys for cfengine by running:"
