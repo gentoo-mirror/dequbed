@@ -1,13 +1,16 @@
 <?xml version="1.0" ?>
 
 <repositories version="1.0">
-    <repo priority="50" quality="experimental" status="unofficial">
-        <name>dequbed</name>
-        <description>My own personal overlay</description>
-        <homepage>https://dequbed.space/</homepage>
-        <owner>
-            <email>me@dequbed.space</email>
-        </owner>
-        <source type="git">https://github.com/dequbed/overlay.git</source>
-    </repo>
+  <repo priority="50" quality="experimental" status="unofficial">
+    <name>dequbed</name>
+    <description>Personal overlay containing mostly small utilities and less stable package versions</description>
+    <homepage>https://dequbed.space/</homepage>
+    <owner>
+      <email>me@dequbed.space</email>
+    </owner>
+    <source type="git">https://github.com/dequbed/overlay.git</source>
+    <source type="git">git://github.com/dequbed/overlay.git</source>
+    <source type="git">git@github.com:dequbed/overlay.git</source>
+    <feed>https://github.com/dequbed/overlay/commits/master.atom</feed>
+  </repo>
 </repositories>
