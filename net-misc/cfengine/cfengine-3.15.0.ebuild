@@ -98,6 +98,7 @@ src_install() {
 	# Create cfengine working directory
 	dodir /var/cfengine/bin
 	fperms 700 /var/cfengine
+	fperms 700 /var/cfengine/ppkeys
 
 	# Copy cfagent into the cfengine tree otherwise cfexecd won't
 	# find it. Most hosts cache their copy of the cfengine
@@ -106,7 +107,7 @@ src_install() {
 	# CFEngine binaries can be used by normal users as well, sym them into
 	# /usr/bin instead
 	for bin in promises agent monitord serverd execd runagent key; do
-		dosym usr/bin/cf-$bin var/cfengine/bin/cf-$bin || die
+		dosym ../../usr/bin/cf-$bin var/cfengine/bin/cf-$bin || die
 	done
 
 	if use masterfiles; then
