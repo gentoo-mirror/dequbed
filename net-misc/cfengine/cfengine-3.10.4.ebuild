@@ -109,6 +109,10 @@ src_install() {
 		dosym /usr/sbin/cf-$bin /var/cfengine/bin/cf-$bin || die
 	done
 
+	for dir in inputs modules outputs plugins ppkeys state; do
+		keepdir /var/cfengine/$dir
+	done
+
 	if use masterfiles; then
 		insinto /var/cfengine
 		doins -r "${WORKDIR}/masterfiles"

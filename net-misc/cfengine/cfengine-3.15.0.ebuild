@@ -114,6 +114,10 @@ src_install() {
 		doins -r "${WORKDIR}/masterfiles"
 	fi
 
+	for dir in inputs modules outputs plugins ppkeys state; do
+		keepdir /var/cfengine/$dir
+	done
+
 	dodir /etc/env.d
 	echo 'CONFIG_PROTECT=/var/cfengine/masterfiles' >"${ED}/etc/env.d/99${PN}" || die
 }
