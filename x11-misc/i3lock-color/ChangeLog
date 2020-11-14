@@ -1,8 +1,0 @@
-  24 Aug 2016; Naohiro Aota <naota@gentoo.org> i3lock-color-9999.ebuild:
-  x11-misc/i3lock-color: fix pam file name
-
-*i3lock-color-9999 (24 Aug 2016)
-
-  24 Aug 2016; Naohiro Aota <naota@gentoo.org> +i3lock-color-9999.ebuild,
-  +metadata.xml:
-  x11-misc/i3lock-color: new package
